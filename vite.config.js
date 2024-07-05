@@ -10,6 +10,7 @@ export default defineConfig({
       '@components': path.resolve(__dirname, 'src/components'),
       '@views': path.resolve(__dirname, 'src/views'),
       '@auth': path.resolve(__dirname, 'src/views/auth'),
+      '@store': path.resolve(__dirname, 'src/store'),
     },
   },
 });

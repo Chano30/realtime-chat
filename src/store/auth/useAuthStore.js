@@ -1,4 +1,4 @@
-import { create } from "zustand";
+import { createWithEqualityFn } from "zustand/traditional";
 
 const initialState = {
   user: null,
@@ -10,9 +10,11 @@ const initialState = {
   error: null
 }
 
-const useAuthStore = create((set) => ({
+const useAuthStore = createWithEqualityFn((set) => ({
   ...initialState,
   resetStore: ()=>{
     set((state) => ({...state, user:null, })) 
   }
 }))
+
+export default useAuthStore
